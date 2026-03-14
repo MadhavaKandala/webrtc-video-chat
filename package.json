@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "ts-node --project tsconfig.server.json server.ts",
-    "build": "next build",
-    "start": "NODE_ENV=production node -r ts-node/register server.ts",
+    "dev": "PORT=3001 ts-node --project tsconfig.server.json server.ts",
+    "build": "next build && tsc --project tsconfig.server.json",
+    "start": "NODE_ENV=production PORT=3001 node dist/server.js",
     "lint": "next lint"
   },
   "dependencies": {
